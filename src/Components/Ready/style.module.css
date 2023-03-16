@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  :root {
+    --blue: #ea7f15;
+    --black: #161616;
+    --light-color: #777;
+    --color: #fff;
+    --background: linear-gradient(rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.904));
+  }
+  
+  .containerProtfolio {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: var(--background), url(../../Images/phone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .protfolio {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.473);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .protfolio .contentBox {
+    padding-left: 20px;
+  }
+  
+  .protfolio .contentBox h1 {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  
+  .protfolio .contentBox small {
+      color: #ea7f15;
+      border: 1px solid #ea7f15;
+      padding: 10px 20px;
+    }
+  .protfolio .imageBox {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0 10% 0;
+  }  
+
+  .protfolio .imageBox a {
+    padding: 10px 30px;
+    color: #ea7f15;
+    border: 1px solid #ea7f15;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .protfolio .imageBox a:hover{
+    padding: 10px 30px;
+    background: #ea801534;
+    border: 1px solid #ea7f15;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  
+  .navbar {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.562);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+    left: 100%;
+    transition: 1s;
+  }
+  
+  .navbar.active {
+    left: 0%;
+  }
+  
+  .navbar {
+    margin-top: 30px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    margin: 10px 0;
+    border: 1px solid #ea7f15;
+    padding: 10px 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  
+  .navbar ul li:hover {
+    background: #e29e5a46;
+    cursor: pointer;
+  }
+  
+  .navbar h4 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    color: #777;
+    transform: rotate(270deg);
+    background: rgba(0, 0, 0, 0.377);
+    margin: 0;
+  }
+  
+  #toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: #ea7f15;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 10;
+  }
+  
+  #toggle.active {
+    background: rgba(241, 57, 94, 0.726);
+  }
+  
+  #toggle::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-5px);
+    transition: 0.2s;
+  }
+  
+  #toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  
+  #toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+  }
+  
+  #toggle::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(5px);
+    transition: 0.2s;
+  }
+  
+  .homeLink{
+    color: #ea7f15;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.562);
+  }
+  
+  .homeLink:hover{
+    border: 1px solid #e29e5a;
+  }
+  
+  @media only screen and (max-width: 768px){
+      .containerProtfolio {
+          width: 100%;
+          height: 100vh;
+         
+        }
+        
+        .protfolio {
+          width: 100%;
+          min-height: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+        }   
+  
+        .protfolio .imageBox {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 10%;
+        }
+  
+        .protfolio .contentBox {
+          padding: 2  0px;
+        }
+
+        .protfolio .contentBox h1 {
+            color: whitesmoke;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            text-transform: uppercase;
+          }
+  }
+  
